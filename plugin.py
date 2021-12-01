@@ -126,34 +126,34 @@ class BasePlugin:
         if self.runInterval <= 0:
             # Get data from DTSU666
             try:
-                Volts_AB = self.rs485.read_float(0x2000, functioncode=4, numberOfRegisters=2)/10
-                Volts_BC = self.rs485.read_float(0x2002, functioncode=4, numberOfRegisters=2)/10
-                Volts_CA = self.rs485.read_float(0x2004, functioncode=4, numberOfRegisters=2)/10
-                Volts_L1 = self.rs485.read_float(0x2006, functioncode=4, numberOfRegisters=2)/10
-                Volts_L2 = self.rs485.read_float(0x2008, functioncode=4, numberOfRegisters=2)/10
-                Volts_L3 = self.rs485.read_float(0x200A, functioncode=4, numberOfRegisters=2)/10
-                Current_L1 = self.rs485.read_float(0x200C, functioncode=4, numberOfRegisters=2)/1000
-                Current_L2 = self.rs485.read_float(0x200E, functioncode=4, numberOfRegisters=2)/1000
-                Current_L3 = self.rs485.read_float(0x2010, functioncode=4, numberOfRegisters=2)/1000
-                Active_Power_L1 = self.rs485.read_float(0x2014, functioncode=4, numberOfRegisters=2)/10
-                Active_Power_L2 = self.rs485.read_float(0x2016, functioncode=4, numberOfRegisters=2)/10
-                Active_Power_L3 = self.rs485.read_float(0x2018, functioncode=4, numberOfRegisters=2)/10
-                Reactive_Power_L1 = self.rs485.read_float(0x201C, functioncode=4, numberOfRegisters=2)/10
-                Reactive_Power_L2 = self.rs485.read_float(0x201E, functioncode=4, numberOfRegisters=2)/10
-                Reactive_Power_L3 = self.rs485.read_float(0x2020, functioncode=4, numberOfRegisters=2)/10
-                Power_Factor_L1 = self.rs485.read_float(0x202C, functioncode=4, numberOfRegisters=2)/1000
-                Power_Factor_L2 = self.rs485.read_float(0x202E, functioncode=4, numberOfRegisters=2)/1000
-                Power_Factor_L3 = self.rs485.read_float(0x2030, functioncode=4, numberOfRegisters=2)/1000
-                Total_System_Active_Power = self.rs485.read_float(0x2012, functioncode=4,numberOfRegisters=2)/10
-                Total_System_Reactive_Power = self.rs485.read_float(0x201A, functioncode=4,numberOfRegisters=2)/10
-                Total_System_Power_Factor = self.rs485.read_float(0x202A, functioncode=4,numberOfRegisters=2)/1000
-                Frequency_Of_Supply_Voltages = self.rs485.read_float(0x2044, functioncode=4, numberOfRegisters=2)/100
-                Total_import_kwh = self.rs485.read_float(0x401E, functioncode=4, numberOfRegisters=2)*1000
-                Total_export_kwh = self.rs485.read_float(0x4028, functioncode=4, numberOfRegisters=2)*1000
-                Total_Q1_kvarh = self.rs485.read_float(0x4028, functioncode=4, numberOfRegisters=2)*1000
-                Total_Q2_kvarh = self.rs485.read_float(0x403C, functioncode=4, numberOfRegisters=2)*1000
-                Total_Q3_kvarh = self.rs485.read_float(0x4046, functioncode=4, numberOfRegisters=2)*1000
-                Total_Q4_kvarh = self.rs485.read_float(0x4050, functioncode=4, numberOfRegisters=2)*1000
+                Volts_AB = self.rs485.read_float(0x2000, functioncode=3, numberOfRegisters=2)/10
+                Volts_BC = self.rs485.read_float(0x2002, functioncode=3, numberOfRegisters=2)/10
+                Volts_CA = self.rs485.read_float(0x2004, functioncode=3, numberOfRegisters=2)/10
+                Volts_L1 = self.rs485.read_float(0x2006, functioncode=3, numberOfRegisters=2)/10
+                Volts_L2 = self.rs485.read_float(0x2008, functioncode=3, numberOfRegisters=2)/10
+                Volts_L3 = self.rs485.read_float(0x200A, functioncode=3, numberOfRegisters=2)/10
+                Current_L1 = self.rs485.read_float(0x200C, functioncode=3, numberOfRegisters=2)/1000
+                Current_L2 = self.rs485.read_float(0x200E, functioncode=3, numberOfRegisters=2)/1000
+                Current_L3 = self.rs485.read_float(0x2010, functioncode=3, numberOfRegisters=2)/1000
+                Active_Power_L1 = self.rs485.read_float(0x2014, functioncode=3, numberOfRegisters=2)/10
+                Active_Power_L2 = self.rs485.read_float(0x2016, functioncode=3, numberOfRegisters=2)/10
+                Active_Power_L3 = self.rs485.read_float(0x2018, functioncode=3, numberOfRegisters=2)/10
+                Reactive_Power_L1 = self.rs485.read_float(0x201C, functioncode=3, numberOfRegisters=2)/10
+                Reactive_Power_L2 = self.rs485.read_float(0x201E, functioncode=3, numberOfRegisters=2)/10
+                Reactive_Power_L3 = self.rs485.read_float(0x2020, functioncode=3, numberOfRegisters=2)/10
+                Power_Factor_L1 = self.rs485.read_float(0x202C, functioncode=3, numberOfRegisters=2)/1000
+                Power_Factor_L2 = self.rs485.read_float(0x202E, functioncode=3, numberOfRegisters=2)/1000
+                Power_Factor_L3 = self.rs485.read_float(0x2030, functioncode=3, numberOfRegisters=2)/1000
+                Total_System_Active_Power = self.rs485.read_float(0x2012, functioncode=3,numberOfRegisters=2)/10
+                Total_System_Reactive_Power = self.rs485.read_float(0x201A, functioncode=3,numberOfRegisters=2)/10
+                Total_System_Power_Factor = self.rs485.read_float(0x202A, functioncode=3,numberOfRegisters=2)/1000
+                Frequency_Of_Supply_Voltages = self.rs485.read_float(0x2044, functioncode=3, numberOfRegisters=2)/100
+                Total_import_kwh = self.rs485.read_float(0x401E, functioncode=3, numberOfRegisters=2)*1000
+                Total_export_kwh = self.rs485.read_float(0x4028, functioncode=3, numberOfRegisters=2)*1000
+                Total_Q1_kvarh = self.rs485.read_float(0x4028, functioncode=3, numberOfRegisters=2)*1000
+                Total_Q2_kvarh = self.rs485.read_float(0x403C, functioncode=3, numberOfRegisters=2)*1000
+                Total_Q3_kvarh = self.rs485.read_float(0x4046, functioncode=3, numberOfRegisters=2)*1000
+                Total_Q4_kvarh = self.rs485.read_float(0x4050, functioncode=3, numberOfRegisters=2)*1000
                 Total_import_Power = 0
                 if Active_Power_L1>0: Total_import_Power += Active_Power_L1
                 if Active_Power_L2>0: Total_import_Power += Active_Power_L2
