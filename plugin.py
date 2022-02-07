@@ -150,7 +150,7 @@ class BasePlugin:
                 Frequency_Of_Supply_Voltages = self.rs485.read_float(0x2044, functioncode=3, numberOfRegisters=2)/100
                 Total_import_kwh = self.rs485.read_float(0x401E, functioncode=3, numberOfRegisters=2)*1000
                 Total_export_kwh = self.rs485.read_float(0x4028, functioncode=3, numberOfRegisters=2)*1000
-                Total_Q1_kvarh = self.rs485.read_float(0x4028, functioncode=3, numberOfRegisters=2)*1000
+                Total_Q1_kvarh = self.rs485.read_float(0x4032, functioncode=3, numberOfRegisters=2)*1000
                 Total_Q2_kvarh = self.rs485.read_float(0x403C, functioncode=3, numberOfRegisters=2)*1000
                 Total_Q3_kvarh = self.rs485.read_float(0x4046, functioncode=3, numberOfRegisters=2)*1000
                 Total_Q4_kvarh = self.rs485.read_float(0x4050, functioncode=3, numberOfRegisters=2)*1000
